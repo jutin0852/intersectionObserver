@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -14,13 +15,91 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media screen and (min-width:300px) {
+  
 img{
-  width: 25%;
+  width: 75%;
+}
+
+
+
+
+.middle{
+  text-align: center;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  scroll-snap-align: start;
+
+}
+.end p{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 300px;
+}
+.end ul{
+  position: fixed;
+  right: 20px;
+   bottom: 20px;
+   
+ }
+.start h2{
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+.start h1{
+  position: fixed;
+  left: 15px;
+  top: 15px;
+}
+
+
+h1{
+  display: inline-block;
+}
+
+html{
+  scroll-snap-type: y mandatory;
+}
+.show{
+  display: block;
+}
+.end ul li:active {
+  font-weight: bolder; 
+
+}
+.end ul li:hover{
+  border-bottom: 2px solid black;
+  cursor: pointer;
+
+}
+.full{
+  transition: background 1s ease;
+}
+.start h1{
+  font-size: 0.9em;
+}
+.start h2{
+  display: none;
+}
+.end {
+  display: none;
+}
+}
+
+
+@media screen and (min-width: 700px) {
+  
+img{
+  width: 35%;
 }
 
 
@@ -81,4 +160,14 @@ html{
 }
 .full{
   transition: background 1s ease;
+}
+.start h1{
+  font-size: 2em;
+}
+.start h2{
+  display: block;
+}
+.end {
+  display: block;
+}
 }
